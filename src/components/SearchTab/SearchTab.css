@@ -1,0 +1,14 @@
+.search-tab {
+    margin: 0;
+}
+
+.search-tab input {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--border-active-color);
+}

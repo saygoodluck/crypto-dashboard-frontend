@@ -1,0 +1,27 @@
+.app {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    font-size: 80%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.app-header {
+    padding: 20px;
+    border-bottom: 1px solid #2c2c2c;
+    text-align: center;
+}
+
+.app-header h1 {
+    margin: 0;
+    color: #00ff00;
+}
+
+.app-header p {
+    margin: 5px 0 0;
+    color: #999;
+}
