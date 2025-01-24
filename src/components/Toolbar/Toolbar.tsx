@@ -6,7 +6,7 @@ const Toolbar = () => {
     return (
         <header className="toolbar">
             {/*<div className="toolbar__logo">MyApp</div>*/}
-            <SearchTab />
+            {/* <SearchTab /> */}
         </header>
     );
 };

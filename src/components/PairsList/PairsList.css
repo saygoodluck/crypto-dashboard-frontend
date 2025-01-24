@@ -1,0 +1,32 @@
+.pairs-list {
+    /* padding-top: 50px; */
+}
+
+.table-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.crypto-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.crypto-table th {
+    color: var(--secondary-text-color);
+}
+
+.crypto-table th,
+.crypto-table td {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.crypto-table tr:hover {
+    background-color: var(--secondary-color);
+}
