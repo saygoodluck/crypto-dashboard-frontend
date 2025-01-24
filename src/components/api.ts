@@ -1,4 +1,4 @@
-import {Symbols} from "../enumeration/Symbols.ts";
+import { Symbols } from "../enumeration/Symbols.ts";
 import axios from "axios";
 
 export type Quote = {

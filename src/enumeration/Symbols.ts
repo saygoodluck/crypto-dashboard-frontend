@@ -1,4 +1,4 @@
-export const Symbols ={
+export const Symbols = {
     BTCUSDT: "BTCUSDT",
     BNBUSDT: "BNBUSDT",
     TRUMPUSDT: "TRUMPUSDT",
