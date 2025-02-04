@@ -1,0 +1,7 @@
+services:
+  frontend:
+    container_name: crypto_dashboard_frontend
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"

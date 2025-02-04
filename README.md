@@ -3,13 +3,22 @@
 Prepare
 
 ```bash
-npm run i
+npm i
 ```
 
-Run
+Run local
+
+requirements:
+node
+npm
 
 ```bash
 npm run dev
+```
+
+Run local docker container
+```bash
+docker compose -f docker-compose.yaml up -d --build
 ```
 
 # React + TypeScript + Vite
