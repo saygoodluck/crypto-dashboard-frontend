@@ -1,0 +1,16 @@
+.auth-button {
+    background-color: #2f5e36;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.auth-button:hover {
+    border: 1px solid #40814a;
+}
+
+.tg-icon {
+    height: 15px;
+    width: 15px;
+}

@@ -19,6 +19,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
+            set -e
+            export BACKEND_URL=${{ secrets.BACKEND_URL }}
             
             if [ ! -d "/root/crypto-dashboard-frontend" ]; then
               git clone --depth=1 -b master https://github.com/saygoodluck/crypto-dashboard-frontend.git /root/crypto-dashboard-frontend

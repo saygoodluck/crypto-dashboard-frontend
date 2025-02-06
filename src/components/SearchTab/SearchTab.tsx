@@ -1,5 +1,5 @@
 import "./SearchTab.css";
-import { ChangeEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 
 interface SearchTabProps {
     onSearchChange: (value: string) => void;

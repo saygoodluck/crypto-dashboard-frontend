@@ -1,6 +1,7 @@
 {
   "name": "crypto-dashboard-frontend",
   "private": true,
+  "author": "Kostia https://github.com/saygoodluck",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

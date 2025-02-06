@@ -1,4 +1,12 @@
 .dashboard {
     margin: 0;
-    padding: 0px;
+    padding: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center;            /* Выравнивание по вертикали */
+    padding: 0 20px;                /* Отступы по бокам для удобства */
 }
