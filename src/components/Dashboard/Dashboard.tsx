@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
         const params = new URLSearchParams(window.location.search);
         const authToken = params.get('authToken');
         if (authToken) {
-            fetch(`${process.env.BACKEND_URL}/api/auth/whoami`,
+            fetch(`http://backend_container/api/auth/whoami`,
                 {
                     method: 'GET',
                     headers: {
