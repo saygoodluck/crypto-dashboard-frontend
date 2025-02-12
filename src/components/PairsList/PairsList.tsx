@@ -16,7 +16,7 @@ const PairsList: React.FC<PairsListProps> = ({ symbols = Object.values(Symbols) 
 
     const fetchQuotes = async (): Promise<void> => {
         try {
-            const response = await axios.get<Quote[]>("https://api.binance.com/api/v3/ticker/24hr", {
+            const response = await axios.get<Quote[]>(import.meta.env.VITE_BINANCE_API, {
                 params: {
                     symbols: JSON.stringify(symbols)
                 }

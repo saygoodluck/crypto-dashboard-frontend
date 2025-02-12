@@ -7,3 +7,7 @@ services:
       - "8080:8080"
     networks:
       - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true

@@ -8,8 +8,7 @@ export default defineConfig({
         strictPort: true,
         host: true,
         allowedHosts: [
-            '91.84.100.160',
-            '6c74-2a02-a311-df-6b00-98bd-5bf9-e4c3-6902.ngrok-free.app'
+            'stirred-llama-social.ngrok-free.app'
         ],
     }
 })
