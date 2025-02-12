@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: deploy
         uses: appleboy/ssh-action@master
+        env:
+          VITE_TELEGRAM_BOT_URL: ${{ secrets.VITE_TELEGRAM_BOT_URL}}
+          VITE_BACKEND_URL: ${{secrets.VITE_BACKEND_URL}}
+          VITE_BINANCE_API: ${{VITE_BINANCE_API}}
         with:
           host: ${{ secrets.SERVER_URL }}
           username: ${{ secrets.SERVER_USER }}
