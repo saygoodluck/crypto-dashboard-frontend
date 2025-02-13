@@ -1,7 +1,7 @@
 # Crypto pairs dashboard
 
 stage version access below
-http://91.84.100.160:8081/
+http://91.84.100.160:3006/
 
 Run local
 
