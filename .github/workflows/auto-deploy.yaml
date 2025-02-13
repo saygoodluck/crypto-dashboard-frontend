@@ -21,9 +21,9 @@ jobs:
           script: |
             set -e
             
-            export VITE_TELEGRAM_BOT_URL: ${{ secrets.VITE_TELEGRAM_BOT_URL }}
-            export VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
-            export VITE_BINANCE_API: ${{ secrets.VITE_BINANCE_API }}
+            export VITE_TELEGRAM_BOT_URL=${{ secrets.VITE_TELEGRAM_BOT_URL }}
+            export VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }}
+            export VITE_BINANCE_API=${{ secrets.VITE_BINANCE_API }}
             
             if [ ! -d "/root/crypto-dashboard-frontend" ]; then
               git clone --depth=1 -b master https://github.com/saygoodluck/crypto-dashboard-frontend.git /root/crypto-dashboard-frontend
