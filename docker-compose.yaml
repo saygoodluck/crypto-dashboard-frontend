@@ -7,6 +7,10 @@ services:
       - "8080:8080"
     networks:
       - my_shared_network
+    environment:
+      - VITE_TELEGRAM_BOT_URL=${$VITE_TELEGRAM_BOT_URL}
+      - VITE_BACKEND_URL=${VITE_BACKEND_URL}
+      - VITE_BINANCE_API=${VITE_BINANCE_API}
 
 networks:
   my_shared_network:
