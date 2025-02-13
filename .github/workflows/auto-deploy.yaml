@@ -13,10 +13,6 @@ jobs:
     steps:
       - name: deploy
         uses: appleboy/ssh-action@master
-        env:
-          VITE_TELEGRAM_BOT_URL: ${{ secrets.VITE_TELEGRAM_BOT_URL }}
-          VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
-          VITE_BINANCE_API: ${{ secrets.VITE_BINANCE_API }}
         with:
           host: ${{ secrets.SERVER_URL }}
           username: ${{ secrets.SERVER_USER }}
@@ -24,7 +20,10 @@ jobs:
           port: 22
           script: |
             set -e
-            export BACKEND_URL=${{ secrets.BACKEND_URL }}
+            
+            export VITE_TELEGRAM_BOT_URL: ${{ secrets.VITE_TELEGRAM_BOT_URL }}
+            export VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
+            export VITE_BINANCE_API: ${{ secrets.VITE_BINANCE_API }}
             
             if [ ! -d "/root/crypto-dashboard-frontend" ]; then
               git clone --depth=1 -b master https://github.com/saygoodluck/crypto-dashboard-frontend.git /root/crypto-dashboard-frontend
