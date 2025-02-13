@@ -10,5 +10,12 @@ export default defineConfig({
         allowedHosts: [
             'stirred-llama-social.ngrok-free.app'
         ],
+        proxy: {
+            '/api': {
+                target: 'http://91.84.100.160:3000', // URL вашего бэкенда
+                changeOrigin: true,
+                secure: false,
+            },
+        },
     }
 })
