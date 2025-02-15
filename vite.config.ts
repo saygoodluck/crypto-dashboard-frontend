@@ -7,8 +7,6 @@ export default defineConfig({
         port: 3006,
         strictPort: true,
         host: true,
-        allowedHosts: [
-            'stirred-llama-social.ngrok-free.app'
-        ],
+        allowedHosts: ['crypto-dashboard.site']
     }
 })
