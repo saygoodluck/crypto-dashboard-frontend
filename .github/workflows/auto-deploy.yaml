@@ -33,6 +33,11 @@ jobs:
               git pull
             fi
             
+            npm run build
+            
+            rm -rf ../../var/www/dist
+            
+            mv dist ../../var/www/
 #            docker compose -f docker-compose.yaml stop
 #            docker compose -f docker-compose.yaml rm -f
 #            docker compose -f docker-compose.yaml up -d --build
