@@ -7,6 +7,6 @@ RUN npm run build
 
 # Production Stage
 FROM nginx:alpine
-COPY --from=build /app/dist /var/www/html
+COPY --from=build /app/dist /var/www
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
