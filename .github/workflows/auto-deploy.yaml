@@ -33,6 +33,6 @@ jobs:
               git pull
             fi
             
-            docker compose -f docker-compose.yaml stop
-            docker compose -f docker-compose.yaml rm -f
-            docker compose -f docker-compose.yaml up -d --build
+#            docker compose -f docker-compose.yaml stop
+#            docker compose -f docker-compose.yaml rm -f
+#            docker compose -f docker-compose.yaml up -d --build
