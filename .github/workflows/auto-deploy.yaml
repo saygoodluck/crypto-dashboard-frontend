@@ -33,6 +33,8 @@ jobs:
               git pull
             fi
             
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             npm run build
             
             rm -rf ../../var/www/dist
