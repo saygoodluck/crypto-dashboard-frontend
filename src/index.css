@@ -11,7 +11,7 @@
   --font-family: 'Roboto', sans-serif;
 
   --background-color: #111111;
-  --secondary-color: #333;
+  --secondary-color: rgba(64, 64, 64, 0.11);
 
   --primary-text-color: #ffffff;
   --secondary-text-color: #646868;

@@ -11,22 +11,68 @@
 
 .crypto-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .crypto-table th {
     color: var(--secondary-text-color);
 }
 
-.crypto-table th,
 .crypto-table td {
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px;
-    text-align: center;
     cursor: pointer;
 }
 
 .crypto-table tr:hover {
     background-color: var(--secondary-color);
+}
+
+/*.crypto-table th,*/
+/*.crypto-table td {*/
+/*    border: 1px solid var(--border-color);*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.crypto-table tr:hover {*/
+/*    background-color: var(--secondary-color);*/
+/*}*/
+
+/* Стили для всех ячеек */
+.crypto-table th,
+.crypto-table td {
+    padding: 8px;
+    border: none; /* убираем все границы по умолчанию */
+    text-align: center;
+}
+
+/* Внешняя верхняя граница для первой строки */
+.crypto-table tr:first-child th,
+tr:first-child td {
+    border: 1px solid var(--border-color);
+}
+
+/* Внешняя нижняя граница для последней строки */
+.crypto-table tr:last-child th,
+tr:last-child td {
+    border: 1px solid var(--border-color);
+}
+
+/* Горизонтальные линии между строками */
+.crypto-table tr:not(:last-child) td {
+    border: 1px solid var(--border-color);
+}
+
+/* Вертикальная внешняя граница слева у первой колонки */
+.crypto-table td:first-child,
+th:first-child {
+    border: 1px solid var(--border-color);
+}
+
+/* Вертикальная внешняя граница справа у последней колонки */
+.crypto-table td:last-child,
+th:last-child {
+    border: 1px solid var(--border-color);
 }
