@@ -4,15 +4,28 @@ export const round = (num: number, decimals: number = 2): number => {
 
 /**
  * Округляет число до заданного количества знаков после запятой.
+ * Если число по модулю меньше 1 (например, 0.00000915), округляет число так,
+ * чтобы сохранить 3 знака после всех ведущих нулей.
  *
  * @param value Число, которое нужно округлить.
- * @param decimals Количество знаков после запятой (по умолчанию 2).
+ * @param decimals Количество знаков после запятой для чисел ≥ 1 (по умолчанию 2).
  * @returns Округлённое число.
  */
 export function roundNumber(value: number, decimals: number = 2): number {
-    const factor = Math.pow(10, decimals);
-    return Math.round(value * factor) / factor;
+    if (value === 0) return 0;
+
+    if (Math.abs(value) < 1) {
+        const absValue = Math.abs(value);
+        const leadingZeros = Math.floor(-Math.log10(absValue));
+        const digits = leadingZeros + 3;
+        const factor = Math.pow(10, digits);
+        return Math.round(value * factor) / factor;
+    } else {
+        const factor = Math.pow(10, decimals);
+        return Math.round(value * factor) / factor;
+    }
 }
+
 
 /**
  * Форматирует число объёма, округляя его:
@@ -26,8 +39,10 @@ export function roundNumber(value: number, decimals: number = 2): number {
  * @returns Отформатированная строка с суффиксом.
  */
 export function formatVolume(value: number): string {
-    if (value < 10000) {
-        return value.toString();
+    if (value < 1) {
+        return value.toFixed(8).replace(/\.?0+$/, '');
+    } else if (value < 10000) {
+        return value.toLocaleString();
     } else if (value < 100000) {
         const rounded = Math.round(value / 10000) * 10000;
         return (rounded / 1000).toFixed(0) + "K";

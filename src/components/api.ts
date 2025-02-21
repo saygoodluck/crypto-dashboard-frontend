@@ -4,7 +4,7 @@ import axios from "axios";
 export type Quote = {
     symbol: string;
     lastPrice: number;
-    volume: number;
+    quoteVolume: number;
     priceChangePercent: number;
 };
 

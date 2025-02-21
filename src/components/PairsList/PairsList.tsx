@@ -59,7 +59,7 @@ const PairsList: React.FC<PairsListProps> = ({symbols = Object.values(Symbols),}
                                 <td style={{fontWeight: "bold"}}>
                                     {roundNumber(quote.lastPrice)}
                                 </td>
-                                <td>{formatVolume(quote.volume)}</td>
+                                <td>{formatVolume(quote.quoteVolume)}</td>
                                 <td
                                     style={{
                                         color: quote.priceChangePercent > 0 ? "green" : "red",
